@@ -1,0 +1,51 @@
+<h1 class="add">Update flight details</h1>
+<form (ngSubmit)="update()" #frm=ngForm action="">
+    <table>
+        <tr>
+            <td>Flight Code: </td>
+            <td><input class="flgtNo form-control form-control-sm readonly" name='flight.code' 
+                 [(ngModel)]='flight.code' #uid=ngModel pattern="[0-9]{3,}" readonly></td>
+            <span *ngIf="uid.dirty && uid.invalid">Invalid ID</span>
+        </tr>
+        <tr>
+            <td>Flight Carrier: </td>    
+            <td> <input class="pass" name='route' [(ngModel)]='flight.carrier' required #carrier=ngModel
+                pattern="[A-Za-z]{5,}">
+                <span *ngIf="carrier.dirty && carrier.invalid">Enter correct name</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Source: </td>    
+            <td> <input class="pass" name='name' [(ngModel)]='flight.source' required #source=ngModel
+                pattern="[A-Za-z]{1,}">
+                <span *ngIf="source.dirty && source.invalid">Invalid Salary Figure</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Destination : </td>    
+            <td> <input class="pass" name='home' [(ngModel)]='flight.destination' required #destination=ngModel
+                pattern="[A-Za-z]{2,}">
+                <span *ngIf="destination.dirty && destination.invalid">Invalid Destination</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Duration : </td>    
+            <td> <input class="pass" name='duration' [(ngModel)]='flight.duration' required #duration=ngModel
+                >
+                <span *ngIf="duration.dirty && duration.invalid">Invalid Duration</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Price : </td>    
+            <td> <input class="pass" name='price' [(ngModel)]='flight.price' required #price=ngModel>
+                <span *ngIf="price.dirty && price.invalid">Invalid Price</span>
+            </td>
+        </tr>
+        <tr>    
+            <td colspan="2"><button class="btn btn-primary" type="submit" [disabled]=!frm.valid>Update details</button></td>
+        </tr>
+    </table>
+    <div >
+
+    </div>
+</form>

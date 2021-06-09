@@ -1,0 +1,19 @@
+<table class="table table-responsive">
+    <tr class="table table-dark ">
+        <th class="alert-info ">Employee Number</th>
+        <th class="alert-info " (click)='orderByName()'>Employee Name</th>
+        <th class="alert-info ">Job</th>
+        <th class="alert-info " (click)='orderBySal()'>Salary</th>
+        <th class="alert-info ">Edit Entry</th>
+        <th class="alert-info ">Delete Entry</th>
+    </tr>
+    <tr class='table-dark' *ngFor="let e of emps, let i = index">
+        <td class='table-primary'>{{ e.empno}}</td>
+        <td class='table-primary'>{{e.empName}}</td>
+        <td class='table-primary'>{{e.job}}</td>
+        <td class='table-primary'>{{e.salary}}</td>
+        <td class='table-dark'><button  class="btn btn-danger btn-sm" (click)=edit(e.empno)> Edit</button></td>
+
+        <td class='table-dark'><button  class="btn btn-danger btn-sm" (click)=remove(e.empno)> Delete</button></td>
+    </tr>
+</table>

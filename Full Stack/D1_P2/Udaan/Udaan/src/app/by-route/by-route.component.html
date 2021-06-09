@@ -1,0 +1,31 @@
+<form (submit)='search()'>
+    <label for="">Source
+        <input class="form-control" name="source" [(ngModel)]="source">
+    </label><br />
+    <label for="">Destination
+        <input class="form-control" name="source" [(ngModel)]="destination">
+    </label><br />
+
+    <br />
+
+    <button class="btn btn-dark" type="submit">Search Flights!</button>
+</form>
+<br>
+<table class="table table-responsive">
+    <tr class="table table-responsive table-dark ">
+        <th class="alert-info ">Flight Number</th>
+        <th class="alert-info">Carrier</th>
+        <th class="alert-info ">Source</th>
+        <th class="alert-info " >Destination</th>
+        <th class="alert-info " >Duration</th>
+        <th class="alert-info "  >Price</th>
+    </tr>
+    <tr class='table-dark' *ngFor="let e of flights, let i = index">
+        <td class='table-primary'>{{ e.code}}</td>
+        <td class='table-primary'>{{e.carrier}}</td>
+        <td class='table-primary'>{{e.source}}</td>
+        <td class='table-primary'>{{e.destination}}</td>
+        <td class='table-primary'>{{e.duration}}</td>
+        <td class='table-primary' >{{e.price}}</td>
+    </tr>
+</table>

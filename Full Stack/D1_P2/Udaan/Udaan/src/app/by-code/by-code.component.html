@@ -1,0 +1,34 @@
+<form (submit)='search()'>
+    <label for="">Enter Code
+        <input class="form-control" name="code" [(ngModel)]="code">
+    </label><br />
+    <label>
+        Search By : 
+        <!-- <select name="searchOption" [(ngModel)]="searchBy" required>
+            <option *ngFor = "let r of searchOptions " [selected]='r' [value]="r">{{r}}</option>
+        </select> -->
+
+    </label>
+    <br />
+
+    <button class="btn btn-dark" type="submit">Search Flights!</button>
+</form>
+<br>
+<table>
+    <tr>
+        <td>Flight code : </td>
+        <td>{{flight.code}}</td>
+    </tr>
+    <tr>
+        <td>Flight Carrier : </td>
+        <td>{{flight.carrier}}</td>
+    </tr>
+    <tr>
+        <td>Source : </td>
+        <td>{{flight.source}}</td>
+    </tr>
+    <tr>
+        <td>Destination : </td>
+        <td>{{flight.destination}}</td>
+    </tr>
+</table>

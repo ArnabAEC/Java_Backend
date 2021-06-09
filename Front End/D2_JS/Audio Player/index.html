@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mp3 Player</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="carosel">
+            <div class="image"><img id="song-img" src="" alt="Song Image"></div>
+            <div class="item">
+
+            </div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="audio">
+            <div class="player">
+                <audio controls id="audio">
+                    HTML5 will not work
+                    <source src="" type="audio/mp3"/>
+                </audio>
+            </div>
+            <div class="buttons">
+                <button class="btn play" onclick="play()">Play</button>
+                <button class="btn pause" onclick="pause()">Pause</button>
+                <button class="btn stop" onclick="Stop()">Stop</button>
+                <button class="btn vol-plus" onclick="volPlus()">Vol Up</button>
+                <button class="btn vol-minus" onclick="volMinus()">Vol Down</button>
+            </div>
+            <hr>
+            <div class="songs-list">
+                <!-- <div class="song" id="Baby" onclick="Baby()"><h2 class="song-head">Baby</h2></div> -->
+                <div class="song" id="" onclick="Zinda()"><h2 class="song-head">Zinda</h2></div>
+                <div class="song" id="" onclick="SunRahaHaii()"><h2 class="song-head">Sun Raha Haii</h2></div>
+                <div class="song" id="" onclick="TumHiHo()"><h2 class="song-head">Tum Hi Ho</h2></div>
+                <!-- <div class="song" id=""><h2 class="song-head"></h2></div> -->
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    header{
+        padding-top: 2em;
+        margin: 0 2em;
+        height: 2em;
+    }
+    header .head{
+        float: left;
+        margin: 2px 2px;
+        width: 45%;
+        height:auto;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    header p{
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+    }
+    header nav{
+        margin: 2px 2px;
+        float: right;
+        width: 50%;
+        box-sizing: border-box;
+        text-transform: uppercase;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+    }
+    section.carousel{
+        height: 3em;
+        padding: 1em;
+        position: relative;
+        border: 1px solid;
+        box-shadow: -2px 3px gray;
+        border-radius: .1em;
+    }
+    div.carousel{
+        width: 98%;
+        height: 2em;
+        position: absolute;
+        bottom: 0;
+    }
+    .btn{
+        float: right;
+        margin: 0em;
+        margin-right: 2em;
+        border: 1px solid orangered;
+    }
+    div.main{
+        position:static;
+        margin-bottom: 1em;
+        height: 85%;
+        display: block;
+        width: 100%;
+        padding-bottom: 24em;
+    }
+    main{
+        float: left;
+        margin-top: 1em;
+        width: 65%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    aside{
+        float: left;
+        width: 35%;
+        height: 100%;
+        margin-top: 1em;
+        margin: 0;
+        padding: 0;
+        border: 1px solid;
+        box-shadow: 2px 3px gray;
+        box-sizing: border-box;
+        box-shadow: blueviolet;
+        text-align: center;
+    }
+    img{
+        width: 93%;
+    }
+    h2{
+        padding: 0 1em;
+ 
+    }
+    h2.aside{
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+    }
+    p{
+        padding: 0 1em;
+    }
+    footer{
+        height: 20%;
+        padding: 3em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    div.footer{
+        width: 33%;
+        box-sizing: border-box;
+        float: left;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <p>
+                Travel Diaries
+            </p>
+        </div>
+
+
+        <nav>
+            <a href="">home</a>
+            <a href="">Blog</a>
+            <a href="">Resume</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+    <hr>
+    <div style="clear:both;margin: 1em;"></div>
+    <section class="carousel">
+        <div  class="carousel" >
+            <button class="btn">Image Gallery</button>
+        </div>
+    </section>
+    <div style="clear:both;margin: 1em;"></div>
+    <section >
+        <div class="main">
+            <main>
+                <h2>
+                    I'M A GREAT TRAVELLER
+                </h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi cum magnam sequi unde nihil reprehenderit numquam dicta quaerat similique aspernatur corporis, placeat distinctio doloribus quod quos dignissimos, libero corrupti. Deserunt.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo laudantium harum, illum recusandae aut ipsum velit soluta id culpa amet reprehenderit inventore quasi non sapiente repudiandae nihil magni doloremque!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae molestiae sed quam obcaecati quod dolore sequi commodi. Obcaecati iste cum voluptate nobis a quo eveniet aspernatur! Sed quas aperiam molestias?
+                </p>
+            </main>
+            <aside>
+                <h2 class="aside">About the Author</h2>
+                <img src="https://th.bing.com/th/id/OIP.kdEXrnvSb4QPHyUmEt31aAHaGg?w=231&h=203&c=7&o=5&pid=1.7">
+                <p>
+                    My name is Puneet. I am 34 years
+                    old.
+                </p>
+                <p>
+                    I give trainings on Js, jquery,
+                    angularjs, nodejs, reactjs, etc..
+                </p>
+            </aside>
+        </div>        
+    </section> 
+    <div style="clear:both;margin: 1em;"></div>
+    <hr>
+    <footer>
+        <div>
+            <div class="footer">
+                <div class="item-head">MY LAST TWEET</div>
+                <div>
+                    <div class="item">Awesome Day for Training!</div>
+                    <div class="item">31Aug2015 06:12</div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="item-head">MY PLACES</div>
+                <div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="item-head">MY FRIENDS</div>
+                <div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <hr>
+</body>
+</html>

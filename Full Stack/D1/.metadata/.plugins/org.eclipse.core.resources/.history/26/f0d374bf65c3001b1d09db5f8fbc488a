@@ -1,0 +1,66 @@
+package com.ibm.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ibm.entity.Employee;
+import com.ibm.repo.EmployeeRepository;
+
+public interface EmployeeService {
+	@Service
+	public class BookService {
+		
+		@Autowired
+		EmployeeRepository employeeRepository;
+
+		public Employee add(Employee employee) {
+			System.out.println("Saving: in service: "+employee);
+			return employeeRepository.save(employee);
+		}
+
+		public List<Employee> listEmployees() {
+			// TODO Auto-generated method stub
+			return employeeRepository.findAll();
+		}
+
+		public Book findBookById(int id) throws EmployeeNotFoundException {
+			// TODO Auto-generated method stub
+			Optional<Employee> optional = employeeRepository.findById(id);
+//			return optional.orElse(null);
+			if(optional.isPresent()) {
+				return optional.get();
+			} else {
+				throw new EmployeeNotFoundException("Employee is not found with id: "+id);
+			}
+		}
+
+		public List<Employee> findBookByName(String Name) {
+			return employeeRepository.SearchByName(Name);
+		}
+
+		public Employee update(Employee employee) {
+			if(employeeRepository.existsById(employee.getNumber())) {			
+				return employeeRepository.save(employee);
+			}
+			return null;
+		}
+
+		public Employee delete(int id) throws EmployeeNotFoundException {
+			
+			Employee employee = findEmployeeById(id);
+			if(employee != null) {
+				employeeRepository.delete(book);
+			}
+			return employee;
+		}
+
+		public List<Employee> filterBookByPrice(double price) {
+			return employeeRepository.myQuery(price);
+		}
+		
+	}
+
+}

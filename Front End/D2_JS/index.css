@@ -1,0 +1,31 @@
+#bulb{
+    border: 2px solid black;
+    border-radius: 50em;
+    height: 10em;
+    width: 9em;
+    margin: 0 auto;
+}
+
+#bulb-handle{
+    border: 2px solid black;
+    border-radius: 5em;
+    height: 2em;
+    width: 4em;
+    text-align: center;
+    margin: 0 auto;
+}
+#bulb-container{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 0 auto;
+}
+#Switch{
+    width: 5em;
+    margin: 0 auto;
+}
+ hr{
+    border: 1px solid black;
+    margin: 6px 2px;
+    width: 95%;
+}

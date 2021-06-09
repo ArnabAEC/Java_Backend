@@ -1,0 +1,39 @@
+<form (submit)='search()'>
+    <label for="">Enter Query
+        <input class="form-control" name="query" [(ngModel)]="query">
+    </label><br />
+    <label>
+        Search By : 
+        <!-- <select name="searchOption" [(ngModel)]="searchBy" required>
+            <option *ngFor = "let r of searchOptions " [selected]='r' [value]="r">{{r}}</option>
+        </select> -->
+        <input class="form-radio" type="radio" id="byName" name="searchOption" [(ngModel)]="searchBy" [value]="'Name'">
+        <label for="byName">Name&nbsp; </label>
+        <input class="form-radio" type="radio" id="byNumber" name="searchOption" [(ngModel)]="searchBy"
+            [value]="'Number'">
+        <label for="female">Number&nbsp; </label><br>
+    </label>
+    <br />
+
+    <button class="btn btn-dark" type="submit">Search Employee!</button>
+</form>
+<br>
+<table *ngFor = "let emp of emps" >
+
+    <tr>
+        <td>Employee Number : </td>
+        <td>{{emp.empno}}</td>
+    </tr>
+    <tr>
+        <td>Employee Name : </td>
+        <td>{{emp.empName}}</td>
+    </tr>
+    <tr>
+        <td>Employee Job : </td>
+        <td>{{emp.job}}</td>
+    </tr>
+    <tr>
+        <td>Employee Salary : </td>
+        <td>{{emp.salary}}</td>
+    </tr>
+</table>

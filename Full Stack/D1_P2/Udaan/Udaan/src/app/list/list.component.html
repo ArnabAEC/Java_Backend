@@ -1,0 +1,25 @@
+<table class="table table-responsive">
+    <tr class="table table-dark ">
+        <th class="alert-info ">Flight Number</th>
+        <th class="alert-info">Carrier</th>
+        <th class="alert-info ">Source</th>
+        <th class="alert-info " >Destination</th>
+        <th class="alert-info " >Duration</th>
+        <th class="alert-info " (click)="orderByPrice()" >Price</th>
+        <th class="alert-info " >Update</th>
+        <th class="alert-info " >Delete</th>
+
+
+    </tr>
+    <tr class='table-dark' *ngFor="let e of flights, let i = index">
+        <td class='table-primary'>{{ e.code}}</td>
+        <td class='table-primary'>{{e.carrier}}</td>
+        <td class='table-primary'>{{e.source}}</td>
+        <td class='table-primary'>{{e.destination}}</td>
+        <td class='table-primary'>{{e.duration}}</td>
+        <td class='table-primary' >{{e.price}}</td>
+        <td class='table-dark'><button  class="btn btn-danger btn-sm" (click)="update(e.code)"> Update</button></td>
+
+        <td class='table-dark'><button  class="btn btn-danger btn-sm" (click)="remove(e.code)"> Delete</button></td>
+    </tr>
+</table>

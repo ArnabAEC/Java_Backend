@@ -1,0 +1,38 @@
+<h1 class="add">Edit Employee Details</h1>
+<form (ngSubmit)="update()" #frm=ngForm action="">
+    <table>
+        <tr>
+            <td>Employee Number: </td>
+            <td><input class="userId form-control form-control-sm readonly" name='emp.empno' 
+                 [(ngModel)]='emp.empno' #uid=ngModel pattern="[0-9]{1,}" readonly></td>
+            <span *ngIf="uid.dirty && uid.invalid">Invalid ID</span>
+        </tr>
+        <tr>
+            <td>Employee Name: </td>    
+            <td> <input class="pass" name='empName' [(ngModel)]='emp.empName' required #ename=ngModel
+                pattern="[A-Za-z]{5,}">
+                <span *ngIf="ename.dirty && ename.invalid">Enter correct name</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Salary: </td>    
+            <td> <input class="pass" name='salary' [(ngModel)]='emp.salary' required #salary=ngModel
+                pattern="[0-9]{4,}">
+                <span *ngIf="salary.dirty && salary.invalid">Invalid Salary Figure</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Employee Job: </td>    
+            <td> <input class="pass" name='job' [(ngModel)]='emp.job' required #job=ngModel
+                pattern="[A-Za-z]{2,}">
+                <span *ngIf="job.dirty && job.invalid">Invalid Job Name</span>
+            </td>
+        </tr>
+        <tr>    
+            <td colspan="2"><button class="btn btn-primary" type="submit" [disabled]=!frm.valid>Edit</button></td>
+        </tr>
+    </table>
+    <div >
+
+    </div>
+</form>

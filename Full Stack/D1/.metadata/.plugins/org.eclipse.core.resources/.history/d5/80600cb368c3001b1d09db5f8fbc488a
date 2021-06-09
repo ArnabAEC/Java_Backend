@@ -1,0 +1,9 @@
+package com.ibm.entity;
+
+public class Employee {
+	private int empNo;
+	private String empName;
+	private String job;
+	private int salary;
+	
+}

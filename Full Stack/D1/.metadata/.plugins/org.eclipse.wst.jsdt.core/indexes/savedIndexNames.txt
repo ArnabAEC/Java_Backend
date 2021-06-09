@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\ibmjfsdb206\Desktop\Arnab's Work Git New\Full Stack\D1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4045868823.index
+2603065650.index
+3970355627.index
+45859491.index
+2892822280.index

@@ -1,0 +1,43 @@
+<div class="container"><h1>Register</h1></div>
+
+<form (ngSubmit)="Save()" action="" class="form form-interactive" #frm=ngForm>
+    <div class="form-group mb-3 container" >
+        <table>
+            <tr>
+                <td>User </td>
+                <td style="text-align: right;">:</td>
+                <td>
+                    <input class="form-control form-control-sm" type="text" name='username' required [(ngModel)]='username' #user=ngModel pattern="[A-Za-z]{5,}">
+                </td>
+                <span *ngIf="user.dirty && user.invalid">Invalid User</span>
+            </tr>
+            <tr>
+                <td>Password </td>
+                <td style="text-align: right;">:</td>
+                <td>
+                    <input class="form-control form-control-sm" type="text" name="pass" [(ngModel)]='passwd' #pass=ngModel required
+                    pattern="[A-Za-z0-9]{5,}">
+                </td>
+                <span *ngIf="pass.dirty && pass.invalid">Invalid pass</span>
+            </tr>
+            <tr>
+                <td>Role </td>
+                <td style="text-align: right;">:</td>
+    
+                <td>
+                    <select class="form-select form-select-sm" name="role" id="role" #role=ngModel [(ngModel)]='registerRole' required>
+                        <option class="" type="text" *ngFor = "let r of roles" [selected]='r'[ngValue]="r">{{r}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2" style="text-align: center;">
+                    <button class="btn btn-primary self-align-center" type="submit" [disabled]=frm.invalid> Save</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</form>
